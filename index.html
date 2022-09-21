@@ -22,28 +22,36 @@
   <body>
     <header class=".header">
       <nav class="nav">
-        <img src="./images/logo.svg" alt="logo" id="logo" />
+        <div class="container">
+          <img src="./images/logo.svg" alt="logo" id="logo" />
+        </div>
       </nav>
       <img src="./images/hero-mobile.jpg" alt="damsel" id="hero" />
     </header>
     <main class="main">
-      <h1><span>We're</span> coming soon</h1>
-      <p>
-        Hello fellow shoppers! We're currently building our new fashion store.
-        Add your email below to stay up-to-date with announcements and our
-        launch deals.
-      </p>
-      <input
-        type="email"
-        name="email"
-        id="email"
-        placeholder=" Email Address"
-      />
-      <img
-        src="./images/icon-arrow.svg"
-        alt="direction arrow"
-        id="icon_arrow"
-      />
+      <div class="container">
+        <h1><span>We're</span> coming soon</h1>
+        <p>
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our
+          launch deals.
+        </p>
+        <form action="" class="form">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder=" Email Address"
+          />
+          <button class="btn" type="submit">
+            <img
+              src="./images/icon-arrow.svg"
+              alt="direction arrow"
+              id="icon_arrow"
+            />
+          </button>
+        </form>
+      </div>
     </main>
 
     <footer>

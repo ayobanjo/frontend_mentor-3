@@ -37,13 +37,22 @@ img {
   display: block;
   max-width: 100%;
 }
-
+#logo {
+  width: 6.3em;
+}
+#hero {
+  width: 100%;
+}
 .nav {
-  width: 90%;
   padding: 1.5rem;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
 }
 .main {
   text-align: center;
+  margin: 2rem 0;
 }
 h1 {
   letter-spacing: 0.2em;
@@ -57,12 +66,6 @@ input {
   padding: 1em;
   border-radius: 2rem;
   border: 1px solid var(--clr-neutral-400);
-  background-image: url(./images/icon-arrow.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 7px 7px;
-
-  background-color: black;
 }
 .attribution {
   font-size: 11px;
