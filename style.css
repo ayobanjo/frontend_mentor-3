@@ -3,14 +3,14 @@
   --clr-primary-300: hsl(0, 93%, 68%);
 
   --clr-neutral-100: hsl(0, 0%, 100%);
-  --clr-neutral-400: hsl(0, 6%, 24%);
+  --clr-neutral-400: hsl(0deg 9% 66%);
   --clr-neutral-900: hsl(0, 0%, 0%);
 
   /* fonts */
   --ff-primary: "Josefin Sans", sans-serif;
 
   --gradient-primary-100: linear-gradient(
-    135deg,
+    to bottom,
     hsl(0, 0%, 100%),
     hsl(0, 100%, 98%)
   );
@@ -20,10 +20,50 @@
     hsl(0, 74%, 74%)
   );
 }
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
-  background: var(--gradient-primary-300);
+  background: var(--gradient-primary-100);
+  font-size: 16px;
+  font-family: var(--ff-primary);
+  min-height: 100vh;
+}
+img {
+  display: block;
+  max-width: 100%;
 }
 
+.nav {
+  width: 90%;
+  padding: 1.5rem;
+}
+.main {
+  text-align: center;
+}
+h1 {
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+span {
+  color: var(--clr-primary-100);
+}
+
+input {
+  padding: 1em;
+  border-radius: 2rem;
+  border: 1px solid var(--clr-neutral-400);
+  background-image: url(./images/icon-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 7px 7px;
+
+  background-color: black;
+}
 .attribution {
   font-size: 11px;
   text-align: center;
