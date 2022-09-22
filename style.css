@@ -52,20 +52,46 @@ img {
 }
 .main {
   text-align: center;
-  margin: 2rem 0;
+  margin: 3.2rem 0;
 }
 h1 {
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  font-weight: 900;
+  font-size: 2.5rem;
 }
 span {
   color: var(--clr-primary-100);
+  font-weight: 300;
+  display: block;
+}
+.main_text {
+  margin: 0.9em;
+  color: var(--clr-primary-100);
+  line-height: 1.5rem;
+}
+.form {
+  position: relative;
 }
 
 input {
-  padding: 1em;
+  padding: 1em 1em;
   border-radius: 2rem;
   border: 1px solid var(--clr-neutral-400);
+  background: transparent;
+}
+input::placeholder {
+  font-size: 12px;
+  font-family: var(--ff-primary);
+  color: var(--clr-primary-100);
+}
+.btn {
+  padding: 0.7rem 1.5rem;
+  border-radius: 2rem;
+  border: none;
+  background-color: var(--clr-primary-300);
+
+  /* position: absolute; */
 }
 .attribution {
   font-size: 11px;
