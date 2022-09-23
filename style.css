@@ -106,3 +106,12 @@ input::placeholder {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+@media (min-width: 700px) {
+  body {
+    background-image: url(./images/bg-pattern-desktop.svg);
+  }
+  #hero {
+    content: url(./images/hero-desktop.jpg);
+  }
+}
