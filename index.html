@@ -26,7 +26,13 @@
           <img src="./images/logo.svg" alt="logo" id="logo" />
         </div>
       </nav>
-      <img src="./images/hero-mobile.jpg" alt="damsel" id="hero" />
+
+      <picture>
+        <source media="(max-width:600px)" srcset="./images/hero-mobile.jpg" />
+        <source media="(min-width: 601px)" srcset="./images/hero-desktop.jpg" />
+        <img src="./images/hero-mobile.jpg" alt="damsel" class="hero_img" />
+      </picture>
+      <!-- <img src="./images/hero-mobile.jpg" alt="damsel" id="hero" /> -->
     </header>
     <main class="main">
       <div class="container">
