@@ -50,8 +50,13 @@
             placeholder=" Email Address"
             required
           />
-          <span class="error_msg visible" id="email_error"
-            >Please provide valid email</span
+          <span
+            class="error_msg"
+            id="email_error"
+            aria-hidden="true"
+            role="alert"
+          >
+            Please provide valid email</span
           >
 
           <button class="btn" type="submit">

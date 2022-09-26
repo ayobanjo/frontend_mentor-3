@@ -58,8 +58,8 @@ img {
 h1 {
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  font-weight: 300;
-  font-size: 3.5rem;
+  font-weight: 600;
+  font-size: 3rem;
 }
 .heading_span {
   color: var(--clr-primary-100);
@@ -100,19 +100,21 @@ input::placeholder {
   right: 0px;
   z-index: 2;
   border: none;
-
   cursor: pointer;
   color: white;
   background: var(--gradient-primary-300);
   transform: translateX(2px);
 }
 
-.error_msg {
-  visibility: hidden;
+#email_error {
+  display: none;
+  font-size: 0.8em;
 }
-
-.visible {
-  visibility: visible;
+#email_error.visible {
+  display: block;
+}
+input.invalid {
+  border-color: red;
 }
 
 .attribution {
