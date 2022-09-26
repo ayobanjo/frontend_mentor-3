@@ -31,8 +31,8 @@ body {
   background: var(--gradient-primary-100);
   font-size: 16px;
   font-family: var(--ff-primary);
-  /* min-height: 100vh; */
-  height: 100%;
+  min-height: 100vh;
+  /* height: 100%; */
 }
 img {
   display: block;
@@ -56,13 +56,12 @@ img {
   margin: 3.2rem 0;
 }
 h1 {
-  letter-spacing: 0.3em;
-  /* line-break: loose; */
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: 300;
   font-size: 3.5rem;
 }
-span {
+.heading_span {
   color: var(--clr-primary-100);
   font-weight: 300;
   display: block;
@@ -107,6 +106,15 @@ input::placeholder {
   background: var(--gradient-primary-300);
   transform: translateX(2px);
 }
+
+.error_msg {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -115,7 +123,31 @@ input::placeholder {
   color: hsl(228, 45%, 44%);
 }
 
-@media (min-width: 601px) {
+/* input:required:invalid {
+  outline: none;
+
+  border: 2px solid hsl(0, 100%, 74%);
+  background-image: url(./images/icon-error.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-origin: content-box;
+}
+input:invalid + span {
+  display: inline;
+  color: hsl(0, 100%, 74%);
+  float: right;
+  font-size: 14px;
+  margin-bottom: 7px;
+}
+input:valid {
+  outline: none;
+  border: 1px solid hsl(154, 59%, 51%);
+}
+span[class="error_msg"] {
+  display: none;
+} */
+
+@media (min-width: 801px) {
   body {
     background-image: url(./images/bg-pattern-desktop.svg);
     /* height: 100%; */
@@ -127,11 +159,7 @@ input::placeholder {
 
     grid-template-areas:
       "one one . two "
-      /* "one one one one  two two two" */
       "three three . two "
-      /* "three three three three two two two"
-      "three three three three two two two" */
-      /* "four four four four two two two" */
       "four four . two";
   }
   .one {
