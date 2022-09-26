@@ -1,8 +1,6 @@
 const btn = document.querySelector("button");
 
-function Validate(e) {
-  e.preventDefault();
-
+function Validate() {
   const emailField = document.getElementById("email");
   let valid = true;
 
