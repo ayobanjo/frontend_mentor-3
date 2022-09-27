@@ -63,7 +63,7 @@ h1 {
 }
 .heading_span {
   color: var(--clr-primary-100);
-  font-weight: 300;
+  font-weight: 400;
   display: block;
 }
 .main_text {
@@ -90,6 +90,7 @@ input::placeholder {
   font-size: 12px;
   font-family: var(--ff-primary);
   color: var(--clr-primary-100);
+  padding-right: 2em;
 }
 
 .btn {
@@ -109,60 +110,44 @@ input::placeholder {
 #email_error {
   display: none;
   font-size: 0.8em;
+  color: var(--clr-primary-300);
+  float: left;
+  margin-top: 0.8em;
+  margin-left: 1em;
 }
 #email_error.visible {
   display: block;
 }
 input.invalid {
-  border-color: red;
+  border: 2px solid var(--clr-primary-300);
+  background-image: url(./images/icon-error.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-origin: content-box;
 }
 
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin-bottom: 2rem;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
-
-/* input:required:invalid {
-  outline: none;
-
-  border: 2px solid hsl(0, 100%, 74%);
-  background-image: url(./images/icon-error.svg);
-  background-repeat: no-repeat;
-  background-position: right;
-  background-origin: content-box;
-}
-input:invalid + span {
-  display: inline;
-  color: hsl(0, 100%, 74%);
-  float: right;
-  font-size: 14px;
-  margin-bottom: 7px;
-}
-input:valid {
-  outline: none;
-  border: 1px solid hsl(154, 59%, 51%);
-}
-span[class="error_msg"] {
-  display: none;
-} */
 
 @media (min-width: 801px) {
   body {
     background-image: url(./images/bg-pattern-desktop.svg);
     /* height: 100%; */
     min-height: 100vh;
-
+    height: calc(100vh - 10px);
     display: grid;
-    /* grid-template-columns: repeat(7, 1fr); */
-    grid-template-columns: 1fr 1fr 2.5rem 2fr;
-
+    grid-template-columns: 3rem 1.5fr 1.5fr 2.5rem 2fr;
+    grid-auto-rows: 1fr;
     grid-template-areas:
-      "one one . two "
-      "three three . two "
-      "four four . two";
+      " . one one . two "
+      " . three three . two "
+      " . four four . two";
   }
   .one {
     grid-area: one;
@@ -181,16 +166,32 @@ span[class="error_msg"] {
     text-align: left;
     padding: 2rem 3rem;
   }
+  .nav {
+    padding: 1.5rem 0;
+  }
   .main {
     margin: 0 0;
+    max-width: 37.5rem;
+    /* transform: translateY(-20px); */
+  }
+  h1 {
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 3.5rem;
+    line-height: 4rem;
   }
   .main_text {
-    margin: 0 0;
+    margin: 2rem 0;
   }
   .hero_img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: revert;
+  }
+  .attribution {
+    font-size: 11px;
+    text-align: left;
   }
 }
